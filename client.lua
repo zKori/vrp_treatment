@@ -24,8 +24,8 @@ end)
 
 Citizen.CreateThread(function()
   while true do
-      local pos = GetEntityCoords(GetPlayerPed(-1), true)
       Citizen.Wait(0)
+      local pos = GetEntityCoords(GetPlayerPed(-1), true)
       for _,v in pairs(npc) do
           x = v[1]
           y = v[2]
@@ -40,10 +40,10 @@ end)
 --[[CLIENT]]--
 Citizen.CreateThread(function()
   while true do
-    local ped = PlayerPedId()
-    local currentPos = GetEntityCoords(ped)
-    health = GetEntityHealth(ped)
       Citizen.Wait(0)
+      local ped = PlayerPedId()
+      local currentPos = GetEntityCoords(ped)
+      health = GetEntityHealth(ped)
       for _,v in pairs(npc) do
         x = v[1]
         y = v[2]
